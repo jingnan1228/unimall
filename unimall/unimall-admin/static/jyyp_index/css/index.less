@@ -1,0 +1,149 @@
+.navbar{
+    border:0;
+    margin-bottom: 0;
+}
+.navbar-default{
+    background-color: #fff;
+}
+.navbar-header{
+    background-color: #fff;
+    img{
+        float: left;
+    }
+}
+.header .container-fluid{
+    padding-right:0;
+    padding-left:0;
+}
+.header{
+    margin-top:0px;
+    transition: all 0.4s;
+    .header-left{
+        padding:0;
+        text-align:center;
+        background:url('../img/bg.png') no-repeat;
+        background-size: cover;
+        .header-left-img{
+            display: inline;
+            max-width: 100%;
+            height:auto;
+            padding-top: 30px;
+            vertical-align: middle;
+            border: 0;
+        }
+    }
+    .header-right{
+        padding-top: 90px;
+        padding-left:15px;
+        padding-right:15px;
+        text-align: center;
+        .header-right-in{
+            text-align: center;
+            img{
+                width: 72px;
+                height: auto;
+                margin-right: 15px;
+                padding: 30px 0;
+                padding-bottom: 30px;
+            }
+            a{
+                color:#fff;
+                font-size:44px;
+                line-height:72px;
+                vertical-align: middle;
+            }
+        }
+        .description{
+            color:#fff;
+            font-size:16px;
+            line-height: 23px;
+        }
+        .download{
+            background-color: #fff;  
+            padding:10px 0px;
+            padding-left:10px;           
+            overflow: hidden;
+            border-radius: 10px;
+            .qrCode{
+                display: inline-block;
+                margin-top:15px;
+                img{
+                    width: 112px;
+                }
+                p{
+                    font-size: 16px;
+                    margin-top:5px;
+                }
+            }
+            .links{
+                display: inline-block;                  
+                margin-top:15px;               
+                .android,.ios{
+                    display: block;
+                    padding: 15px 30px;
+                    padding-left:50px;
+                    color: white;
+                    font-weight: 400;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
+                .android{
+                    background:url('../img/Android.png') no-repeat 15% 12px;
+                    background-color: #66d8e6;
+                }
+                .ios{
+                    margin-top:15px;
+                    background:url('../img/ios.png') no-repeat 15% 10px;
+                    background-color: #37aef5;;
+                }
+            }
+        }
+    }
+}
+
+section{
+    .all-part{
+        .part:nth-child(odd){
+            background-color: #edf8ff;
+        }
+        .part:nth-child(even){
+            background-color: #fff;
+        }
+        .part{  
+            .title{
+                text-align: center;
+                h3{
+                    font-size: 16px;
+                    text-transform: none;
+                    font-weight: 300;
+                    color: #6f7c82;
+                    line-height: 1.5;
+                }
+            }
+            .pic{
+                text-align: center;
+                padding:30px;
+                img{
+                    width: 100%;
+                }
+            }
+        } 
+    } 
+}
+#bs-example-navbar-collapse-1{
+    border:0
+}
+.foot{
+    padding:30px 0;
+    text-align: center;
+    background-color: #404049;
+    span{
+        font-size: 12px;
+        color: #8c8f94;
+    }
+    a{
+        color: #617fde;
+        padding-left:10px;
+    }
+}

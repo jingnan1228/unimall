@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iotechn.unimall.data.mapper.IntegralRecordMapper">
+    <!--查询所有积分返还记录-->
+    <select id="selectRecordPage" resultType="com.iotechn.unimall.data.domain.IntegralRecordDO">
+      SELECT r.id,r.integral integral,u.nickname nickname, o.order_no as orderNo,r.gmt_create createtime
+      from unimall_user_integral_record r
+	  LEFT JOIN unimall_user u on u.id=r.user_id
+	  LEFT JOIN unimall_order o on o.id=r.order_id
+	  limit #{pageNo},#{pageSize}
+    </select>
+
+
+</mapper>

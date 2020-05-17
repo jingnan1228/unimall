@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iotechn.unimall.data.mapper.AppManagerMapper">
+    <select id="selectLastOne" resultType="com.iotechn.unimall.data.dto.AppManagerDTO">
+        select * from unimall_app_manager order by id DESC limit 1
+
+    </select>
+
+    <select id="listPage" resultType="com.iotechn.unimall.data.domain.AppManagerDO">
+      SELECT id,app_name as appName,title,update_content updateContent,type,version,link,
+      is_compulsory_renewal isCompulsoryRenewal,size,createtime,updatetime
+      FROM unimall_app_manager
+     <if test="type != null">
+        AND type =#{type}
+     </if>
+        limit #{pageIndex},#{pageSize};
+    </select>
+
+</mapper>

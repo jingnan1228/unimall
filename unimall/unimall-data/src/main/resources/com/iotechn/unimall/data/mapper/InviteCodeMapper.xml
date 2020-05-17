@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iotechn.unimall.data.mapper.InviteCodeMapper">
+    <!--校验用户提供的邀请码-->
+    <select id="selectInviteCode" resultType="com.iotechn.unimall.data.domain.InviteCodeDO">
+        SELECT
+        id,
+        invite_code AS inviteCode,
+        user_id AS userId,
+        admin_id AS adminId
+        FROM
+        unimall_invite_code
+        WHERE
+        1 = 1
+
+        <if test="inviteCode != null">
+            AND invite_code =#{inviteCode}
+        </if>
+
+    </select>
+
+    <!--查询最后一条记录-->
+    <select id="selectLast" resultType="com.iotechn.unimall.data.domain.InviteCodeDO">
+       select id,
+        invite_code AS inviteCode,
+        user_id AS userId,
+        admin_id AS adminId
+         from unimall_invite_code order by id DESC limit 1
+    </select>
+
+</mapper>
